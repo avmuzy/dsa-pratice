@@ -1,3 +1,5 @@
+import numpy as np
+import pandas as pd
 import random
 lista = []
 for c in range(1, 100):
