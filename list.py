@@ -7,5 +7,5 @@ for c in range(1, 10):
     print(sorted(lista))
     df = pd.DataFrame(lista, columns = ['Numeros'])
     print(df)
-for x in range(2,len(lista)-1):
-    print(lista[x])
+
+
