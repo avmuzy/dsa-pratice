@@ -60,3 +60,12 @@ O   |
 / \  |
      |
 =========''']
+
+
+class Hangman:
+
+    # Método Construtor
+    def __init__(self, word):
+        self.word = word
+        self.missed_letters = []
+        self.guessed_letters = []
