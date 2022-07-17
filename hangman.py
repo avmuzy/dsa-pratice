@@ -69,3 +69,12 @@ class Hangman:
         self.word = word
         self.missed_letters = []
         self.guessed_letters = []
+
+    def guess(self, letter):
+        if letter in self.word and letter not in self.guessed_letters:
+            self.guessed_letters.append(letter)
+        elif letter not in self.word and letter not in self.missed_letters:
+            self.missed_letters.append(letter)
+        else:
+            return False
+        return True
