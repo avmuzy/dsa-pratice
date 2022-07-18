@@ -78,3 +78,7 @@ class Hangman:
         else:
             return False
         return True
+
+    def hangman_over(self):
+        return self.hangman_won() or (len(self.missed_letters) == 6)
+
