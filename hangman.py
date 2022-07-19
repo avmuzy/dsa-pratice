@@ -96,3 +96,14 @@ class Hangman:
                 rtn += letter
         return rtn
 
+    def print_game_status(self):
+        print(board[len(self.missed_letters)])
+        print('\nPalavra: ' + self.hide_word())
+        print('\nLetras erradas: ', )
+        for letter in self.missed_letters:
+            print(letter, )
+        print()
+        print('Letras corretas: ', )
+        for letter in self.guessed_letters:
+            print(letter, )
+        print()
