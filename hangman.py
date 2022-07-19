@@ -86,3 +86,13 @@ class Hangman:
         if '_' not in self.hide_word():
             return True
         return False
+
+    def hide_word(self):
+        rtn = ''
+        for letter in self.word:
+            if letter not in self.guessed_letters:
+                rtn += '_'
+            else:
+                rtn += letter
+        return rtn
+
