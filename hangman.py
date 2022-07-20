@@ -107,3 +107,9 @@ class Hangman:
         for letter in self.guessed_letters:
             print(letter, )
         print()
+
+
+def rand_word():
+    with open("palavras.txt", "rt") as f:
+        bank = f.readlines()
+    return bank[random.randint(0, len(bank))].strip()
