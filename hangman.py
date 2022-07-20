@@ -113,3 +113,21 @@ def rand_word():
     with open("palavras.txt", "rt") as f:
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
+
+def main():
+    game = Hangman(rand_word())
+
+    while not game.hangman_over():
+        game.print_game_status()
+        user_input = input('\nDigite uma letra: ')
+        game.guess(user_input)
+
+    game.print_game_status()
+
+    if game.hangman_won():
+        print('\nParabéns! Você venceu!!')
+    else:
+        print('\nGame over! Você perdeu.')
+        print('A palavra era ' + game.word)
+
+    print('\nFoi bom jogar com você! Agora vá estudar!\n')
