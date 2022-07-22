@@ -1,5 +1,6 @@
 import random
 
+# Board
 board = ['''
 
 >>>>>>>>>>Hangman<<<<<<<<<<
@@ -61,9 +62,10 @@ O   |
 =========''']
 
 
+# Class
+
 class Hangman:
 
-    # Método Construtor
     def __init__(self, word):
         self.word = word
         self.missed_letters = []
