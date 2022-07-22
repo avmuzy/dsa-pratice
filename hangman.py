@@ -1,4 +1,3 @@
-
 import random
 
 board = ['''
@@ -114,6 +113,7 @@ def rand_word():
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
 
+
 def main():
     game = Hangman(rand_word())
 
@@ -131,3 +131,7 @@ def main():
         print('A palavra era ' + game.word)
 
     print('\nFoi bom jogar com você! Agora vá estudar!\n')
+
+
+if __name__ == "__main__":
+    main()
