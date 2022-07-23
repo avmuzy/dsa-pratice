@@ -7,3 +7,7 @@ print('''Choose the language you want to play:
 print('=' * 40)
 
 option = int(input('Enter your language:'))
+
+if option == 2:
+    from hangman_Port import *
+
