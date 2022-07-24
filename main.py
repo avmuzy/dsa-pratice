@@ -11,3 +11,5 @@ option = int(input('Enter your language:'))
 if option == 2:
     from hangman_Port import *
 
+if option == 1:
+    from hangman_Eng import *
