@@ -112,7 +112,7 @@ class Hangman:
 
 
 def rand_word():
-    with open("words.txt", "rt") as f:
+    with open("venv/words.txt", "rt") as f:
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
 
@@ -134,3 +134,4 @@ def main():
         print('The word was: ' + game.word)
 
     print('\nNice to play with you ! Get back to study!\n')
+
