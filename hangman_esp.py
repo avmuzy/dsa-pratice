@@ -109,3 +109,32 @@ class Hangman:
         for letter in self.guessed_letters:
             print(letter, )
         print()
+
+def rand_word():
+    with open("palavras.txt", "rt") as f:
+        bank = f.readlines()
+    return bank[random.randint(0, len(bank))].strip()
+
+
+def main():
+    game = Hangman(rand_word())
+
+    while not game.hangman_over():
+        game.print_game_status()
+        user_input = input('\nIngesa una letra: ')
+        game.guess(user_input)
+
+    game.print_game_status()
+
+    if game.hangman_won():
+        print('\n¡Felicidades! Ganaste!!')
+    else:
+        print('\nGame over! Tú perdiste.')
+        print('la palabra era ' + game.word)
+
+    print('\nFue bueno jugar com usted! Ahora ve a estudiar!\n')
+
+
+if __name__ == "__main__":
+    main()
+
