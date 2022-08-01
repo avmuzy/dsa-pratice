@@ -111,7 +111,7 @@ class Hangman:
         print()
 
 def rand_word():
-    with open("palavras.txt", "rt") as f:
+    with open("palabras.txt", "rt") as f:
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
 
